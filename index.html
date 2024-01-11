@@ -92,7 +92,7 @@
                     <div class="col-md-12">
                         <div class="big-title text-center">
                             <h1>Powershell</h1>
-                            <p class="lead">La guía básica de PowerShell está diseñada para introducir a los usuarios en el poderoso y versátil shell de línea de comandos y lenguaje de scripting desarrollado por Microsoft. PowerShell es esencial para administrar y automatizar tareas en entornos Windows, permitiendo a los usuarios interactuar con el sistema operativo y otras aplicaciones de manera eficiente.</p>
+                            <p class="lead">Guia Basica para nuevos usuarios</p>
                         </div>
                         <!-- end title -->
                     </div>
@@ -110,9 +110,9 @@
                 <div class="col-md-3">
                     <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
                         <ul class="nav">
-                            <li><a href="#line1">Getting Started</a></li>
-                            <li><a href="#line2">How to Install WordPress</a></li>
-                            <li><a href="#line3">How to Install Theme</a></li>
+                            <li><a href="#line1">Configuración de entorno</a></li>
+                            <li><a href="#line2">CMDLets/Verbos/Get-Help</a></li>
+                            <li><a href="#line3">Archivos y carpetas</a></li>
                             <li><a href="#line4">Necessary Plugins</a></li>
                             <li><a href="#line5">Creating Blog Pages</a></li>
                             <li><a href="#line6">Revolution Slider</a></li>
@@ -139,42 +139,39 @@
 
                         <div class="row">
                             <div class="col-md-12 left-align">
-                               <h2 class="dark-text">Introduction<hr></h2>
+                               <h2 class="dark-text">Introducción<hr></h2>
                                 <div class="row">
 
                                     <div class="col-md-12 full">
                                         <div class="intro1">
                                             <ul>
-                                                <li><strong>Item Name : </strong>Gather Responsive Event Template</li>
-                                                <li><strong>Item Version : </strong> v 1.0</li>
-                                                <li><strong>Author  : </strong> <a href="http://themeforest.net/user/surjithctly" target="_blank">Surjith S M</a></li>
-                                                <li><strong>Support Forum : </strong> <a href="https://support.surjithctly.in/forums" target="_blank">https://support.surjithctly.in/forums</a></li>
-                                                <li><strong>License : </strong> <a href="#" target="_blank">Un License</a></li>
+                                                <li><strong>Autor : </strong>Francsico Banegas</li>
+                                                <li><strong>Contacto : </strong> <a href="https://discord.com/users/.carta_filo" target="_blank">Discord</a></li>
+                                                <li><strong>Youtube : </strong> <a href="https://www.youtube.com/c/FrancoBanegas" target="_blank">FranciscoBanegas</a></li>
                                             </ul>
                                         </div>
 
                                         <hr>
                                         <div>
-                                            <p>First of all, Thank you so much for purchasing this template and for being my loyal customer.
-                                                <strong>You are awesome!</strong>
-                                                <br> You are entitled to get free lifetime updates to this product + exceptional support from the author directly.
+                                            <p>Esta guía fue diseñada para introducir a los usuarios en el poderoso y versátil shell de línea de comandos y lenguaje de scripting desarrollado por  
+                                                <strong>Microsoft.</strong>
+                                                <br>PowerShell es esencial para administrar y automatizar tareas en entornos Windows, permitiendo a los usuarios interactuar con el sistema operativo y otras aplicaciones de manera eficiente.
                                             </p>
 
-                                            <p>This documentation is to help you regarding each step of customization. Please go through the documentation carefully to understand how this template is made and how to edit this properly. Basic HTML and CSS knowledge is required to customize this template. You may learn basics from <a href="http://www.w3schools.com/" target="_blank">w3schools</a>, <a href="https://developer.mozilla.org/" target="_blank">Developer.mozilla</a> and <a href="http://learn.shayhowe.com/html-css/building-your-first-web-page/" target="_blank">learn.shayhowe</a>. </p>
-
-                                            <h4>Requirements</h4>
-                                            <p>You will need the following sofwares to customize this template.</p>
+                                            <h4>Prerequisitos</h4>
+                                            <p>
+                                                Antes de comenzar a aprender PowerShell, es útil que el usuario tenga algunos conocimientos y herramientas básicas. Aquí hay una lista de requisitos previos recomendados:</p>
                                             <ol>
-                                                <li>Code Editing Software (eg: Dreamweaver, Sublime Text or Notepad)</li>
-                                                <li>Web Browser for testing (eg: Google Chrome or Mozilla Firefox)</li>
-                                                <li>FTP Tool to upload files to Server (eg: <a href="https://filezilla-project.org/download.php?type=client" target="_blank">FileZilla</a>) </li>
+                                                <li>Conocimientos Básicos de Windows</li>
+                                                <li>Un editor de codigo (ej: <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>)</li>
+                                                <li>Linea de comandos Traditional (CMD)</li>
+                                                <li>Conceptos basico de Scripting</li>
                                             </ol>
                                             <div class="intro2 clearfix">
-                                                <p><i class="fa fa-exclamation-triangle"></i> Be careful while editing the template. If not edited properly, the design layout may break completely.
-                                                    <br> No support is provided for faulty customization.
+                                                <p><i class="fa fa-exclamation-triangle"></i>Si hay algún error ortográfico o explicación mal escrita, por favor <a href="https://discord.com/users/.carta_filo" target="_blank">Contactanos</a>.
+                                                    <!-- <br>Si desea ayudar a mejorar esta guía, por favor <a href="https://discord.com/users/.carta_filo" target="_blank">Contactanos</a>. -->
                                                 </p>
                                             </div>
-
                                         </div>
                                     </div>
 
@@ -188,7 +185,7 @@
 
                         <div class="row">
                             <div class="col-md-12 left-align">
-                                <h2 class="dark-text">Getting Started <hr></h2>
+                                <h2 class="dark-text">Configuración de entorno<hr></h2>
                             </div>
                             <!-- end col -->
                         </div>
@@ -196,37 +193,46 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                <p>Antes de comenzar a configurar nuestro entorno de desarrollo, es importante verificar su version de PowerShell. Para ello utilizaremos el comando <code>Get-Host</code> o bien utilizar la variable <code>$PSVersionTable</code>.</p>
 
-                                <h4>Bootstrap Grid System</h4>
+                                <h4>Resultado</h4>
 
                                 <pre class="brush: html; highlight: [2,4]">
-                            <div class="container">
+                                    
+Name             : ConsoleHost
+Version          : 5.1.19041.3803
+InstanceId       : a99043e9-42b7-4fb1-9698-b4ad1f094170
+UI               : System.Management.Automation.Internal.Host.InternalHostUserInterface
+CurrentCulture   : es-AR
+CurrentUICulture : es-ES
+PrivateData      : Microsoft.PowerShell.ConsoleHost+ConsoleColorProxy
+DebuggerEnabled  : True
+IsRunspacePushed : False
+Runspace         : System.Management.Automation.Runspaces.LocalRunspace
+                                </pre>
+
+                            <p>La versión actual de PowerShell es 5.1 y partiremos desde esta version. <br>
+                                <b>Para evitar problemas recomendamos utilizar la version 5.1 o superior.</b>
+                            </p>
+                                <h3>Instalar ultima version<hr></h3>
+                                <p>Para Instalar PowerShell en su ultima version es necesario ingresar en nuestra terminal el siguiente comando:</p>                              
+                              
+                                <pre class="brush: javascript"> 
+                                    iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
+                                
+                            </pre>
+
+                                <p>Tambien puede descargar directame el executable desde <a href="https://github.com/PowerShell/PowerShell/releases" target="_blank">PowerShell Releases</a></p>
+                                <hr>
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        YOUR CODES GOES HERE
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <div class="media">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/C8VTbqIdt8Q" frameborder="0" allowfullscreen></iframe>
+                                        </div>
                                     </div>
+        
                                 </div>
-                            </div></pre>
-
-                                <p>Our you can use the grid system with 2 columns like this;</p>
-
-                                <pre class="brush: html">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                </div>
-                            </div>
-                         </pre>
-
-                                <p>Our you can use the grid system with 3 columns like this;</p>
-
-                                <pre class="brush: html">
+                                <!-- <pre class="brush: html">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -240,8 +246,34 @@
                                     </div>
                                 </div>
                             </div>
-                         </pre>
+                         </pre> -->
+
+                         <h3>Que herramientas de PowerShell estan disponibles para scripting</h3>
+                         <p>Esta es una lista de algunas de las herramientas de PowerShell que estan disponibles para scripting.</p>
+                            <ol>
+                                <li>PowerShell</li>
+                                <li>Windows PowerShell ISE</li>
+                                <li>Visual Studio Code</li>
+                                <li>PowerShell Studio</li>
+                                <li>Sublime Text </li>      
+                                <li>ISESteroids</li> 
+                            </ol>
+                            <P>Por razones ovideas, no utilizaremos la terminal de PowerShell para escribir los scripts.
+                                <br>En esta guia utilizaremos el editor de texto (Visual Studio Code). pero podemos utilizar cualquieras de la ya mencionada,
+                                <br>Tambien debo resaltar que <strong>ISESteroids</strong> no es un editor si no una vitamina. para <strong>Windows PowerShell ISE</strong>.
+                            </p>
+                            <div class="intro2 clearfix">
+                                <p> <i class="fa fa-windows"></i>Windows Powershell ISE es un IDE no es un editor.
+                                    <br>Un IDE es una herramienta para escribir, editar, depurar y ejecutar tu código en tiempo real.
+                                </p>
                             </div>
+                            <h3>Habilitar Execution de Scripting</h3>
+                            <p>Para habilitar Execution de Scripting en PowerShell es necesario ejecutar el siguiente comando.</p>
+                            <pre class="brush: javascript">
+                                Set-ExecutionPolicy -ExecutionPolicy Unrestricted 
+
+                     </pre>
+                        </div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
@@ -253,34 +285,111 @@
 
                         <div class="row">
                             <div class="col-md-12 left-align">
-                                <h2 class="dark-text">How to Install WordPress <hr></h2>
+                                <h2 class="dark-text">CMDLets/Verbos/Get-Help<hr></h2>
                             </div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
 
-                        <div class="intro2 clearfix">
+                        <!-- <div class="intro2 clearfix">
                             <p><i class="fa fa-wordpress"></i> Lorem the It is a long established fact that a reader will be distracted..
                                 <br> Please read more about WordPress here. <a href="#">WordPress Installation via FTP.</a> </p>
-                        </div>
+                        </div> -->
 
+                        <!-- <hr> -->
+
+                        <h4>Que son los CMDLets</h4>
+
+                        <p>
+                            Los Cmdlets son comandos únicamente funcionales bajo Powershell y en .NET. Esto es debido a que PowerShell accede objectos de clase .NET de manera nativa en nuestro sistema. Implica que todo funciona en le mismo ecosistema a diferencia de su predecesor (CMD).</p>
+
+                        <a href="https://learn.microsoft.com/es-es/powershell/scripting/powershell-commands?view=powershell-7.4" target="_blank" class="btn btn-primary">Saber más</a>
                         <hr>
-
-                        <h4>Upload via WordPress Admin</h4>
-
-                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-
-                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
-                        <hr>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-md-8 col-md-offset-2">
                                 <div class="media">
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/snFzbPm_RUE" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
 
-                        </div>
+                        </div> -->
+                        <h3>Principales diferencias a su predecesor</h3>
+                        <ol>
+                            <li>Los cmdlets son objetos de clase de .NET Framework:
+                                <ul>
+                                    <li>En PowerShell, los cmdlets son pequeños bloques de codigo que realizan tareas específicas. La ventaja de que sean objetos de clase de .NET Framework es que pueden aprovechar la amplia funcionalidad proporcionada por la biblioteca de clases .NET. Esto permite una integración más profunda con el sistema operativo y otras aplicaciones basadas en .NET.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>No son ejecutables independientes:
+                                <ul>
+                                    <li>PowerShell no solo es un shell de línea de comandos, sino también un entorno de scripting. Los cmdlets no son archivos ejecutables independientes; en su lugar, son funciones y comandos que se pueden utilizar dentro del entorno de PowerShell. Esto facilita la creación de scripts y la automatización de tareas.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>Los objetos se pueden pasar como salida para la canalización:
+                                <ul>
+                                    <li>Una de las características poderosas de PowerShell es su capacidad para usar objetos en lugar de solo texto en la canalización. Esto significa que los resultados de un cmdlet son objetos que pueden ser pasados directamente a otros cmdlets sin necesidad de conversiones complicadas. Facilita el procesamiento y la manipulación de datos.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>Te permite crear interfaces a partir de Windows Forms:
+                                <ul>
+                                    <li>PowerShell tiene la capacidad de crear interfaces gráficas de usuario utilizando Windows Forms. Esto permite a los usuarios diseñar formularios interactivos y aplicaciones GUI utilizando PowerShell, lo que facilita la creación de herramientas personalizadas y la automatización de procesos más complejos.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>El proceso de ejecución no está en una secuencia de texto estática sino que hace objetos dinámicos:
+                                <ul>
+                                    <li>PowerShell opera con objetos dinámicos en lugar de simplemente procesar texto estático. Esto significa que puedes trabajar con objetos y propiedades directamente, lo que simplifica la manipulación de datos y la realización de tareas complejas. El enfoque orientado a objetos de PowerShell lo hace más flexible y potente en comparación con los shells que operan principalmente con texto plano.</li>
+                                </ul>
+                            </li>
+                            <br>
+                        </ol>
+                        <p>En conjunto, estas características hacen de PowerShell una herramienta potente y versátil para la administración y automatización de tareas en entornos Windows.</p>
+                    <hr>
+                    <h4 class="dark-text">Verbos</h4>
+                        <p>Los comandos en PowerShell iniciar con un Verbos seguido de un Sustantivo. Los Verbos en PowerShell lo permiten saber que acción va a realizar dicho comando antes de ejecutarlo. En cambio un sustantivo es una palabra que sirve para nombrar cosas materiales o elementos inmateriales.</p>                         
+                        <img src="images/upload/flujo.PNG" alt="Verbos/Sustantivo">
+                        <P>Hay mucho verbos que indica en PowerShell que acción va a realizar al momento de escribirlo, aquí le dejo una lista de los mas comunes.</P>
+                        <h3>Lista de Verbos mas utilizados</h3>
+                        <ol>
+                            <li><code>Get </code>- Conseguir</li>
+                            <li><code>Set</code> - Establecer</li>
+                            <li><code>Remove</code> - Eliminar</li>
+                            <li><code>Enable</code> - Habilitar</li>
+                            <li><code>Disable</code> - Deshabilitar</li>
+                            <li><code>Start</code> - Iniciar</li>
+                            <li><code>Add</code> - Agregar</li>
+                            <li><code>Write</code> - Escribir</li>
+                            <li><code>New</code> - Nuevo</li>
+                            <li><code>Stop</code> - Detener</li>
+                            <li><code>Clear</code> - Limpiar</li>
+                            <li><code>Update</code> - Actualizar</li>
+                            <li><code>Reset</code> - Reiniciar</li>
+                            <li><code>Test</code> - Probar</li>
+                        </ol>
+                        <p>Si desea Profundizar le adjunto la documentación oficial en donde habla muchos mas al respecto de los verbos.</p>
+                        <h4>Verbos aprobados para los comandos de PowerShell <a href="https://learn.microsoft.com/es-es/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands?view=powershell-7.3#common-verbs" target="_blank" class="btn btn-primary">Saber más</a> </h4>
+                        <hr>
+                        <h3>Get-Help</h3>
+                        <p>El cmdlet Get-Help en PowerShell se utiliza para obtener información detallada sobre los cmdlets, funciones, scripts, módulos, y otros elementos de PowerShell. Proporciona documentación en línea que puede ayudarte a comprender cómo usar y aprovechar las distintas funcionalidades de PowerShell. Aquí tienes una explicación básica junto con un ejemplo de uso:</p>
+                        <h4>Sintaxis básica:</h4>
+                        <pre class="brush: javascript">
+                        
+                       Get-Help [-Name] cmdletName [-Detailed] [-Examples] [-Full] [-Online]
 
+                       
+                        </pre>
+                        <hr>
+                        <h4>Parametros</h4>
+                        <ol>
+                            <li>-Name: específicas el nombre del cmdlet.</li>
+                            <li>-Detailed: Muestra detalles adicionales.</li>
+                            <li>-Examples: Muestra ejemplos de uso.</li>
+                            <li>-Full: Muestra la documentación completa.</li>
+                            <li>-Online: Muestra la documentación en línea.</li>
+                        </ol>
                     </section>
                     <!-- end section -->
 
@@ -288,27 +397,51 @@
 
                         <div class="row">
                             <div class="col-md-12 left-align">
-                                <h2 class="dark-text">How to Install Theme <hr></h2>
+                                <h2 class="dark-text">Archivos y carpetas<hr></h2>
                             </div>
                             <!-- end col -->
                         </div>
                         <!-- end row -->
 
-                        <h4>Upload via WordPress Admin</h4>
+                        <!-- <h4>Upload via WordPress Admin</h4> -->
 
-                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p>Ver, Crear, Copiar ,Eliminación , Mover, Renombrar, Comprobar, Obtener Información en archivos y carpetas en PowerShell.</p>
 
-                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+                        <!-- <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a> -->
 
                         <hr>
 
-                        <h4>Upload via FTP Server</h4>
+                        <h4>Ver directorio</h4>
 
-                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p>Get-ChildItem lo permitirá obtener los elementos actuales y sub elementos.</p>
 
-                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+                        <!-- <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a> -->
                         <hr>
-                        <div class="row">
+                        <pre class="brush: javascript">
+                            Obtener-Directorio -Path C:\Demo
+                            ----------------------------------
+                            Get-ChildItem -Path C:\Demo
+                        
+                        </pre>
+                        <h4>Salida</h4>
+                        <pre class="brush: javascript">
+
+                        Directorio: C:\Demo
+
+                        Mode                LastWriteTime         Length Name
+                        ----                -------------         ------ ----
+                        d-----        2/15/2023     05:29                Demo2
+                        -a----        2/13/2023     05:55           8014 Demo.txt
+                        -ah----         2/1/2023     08:43            183 Demo.ps1
+                        -ar---        2/12/2023     14:31             27 SoloLectura.txt
+
+
+                </pre>
+
+                <hr>
+                <p>En la salida obtendremos el <b> nombre ,fecha ,Longitud </b>(de los archivos) y <b>Modo</b>. <br>
+                    Voy a hacer énfasis en la salida <b>Mode</b> (Modo). Dicha salida lo esta indicando si se trata de un directorio o archivo y en que estado esta ejemplo si esta oculto, solo lectura ,etc.</p>
+                        <!-- <div class="row">
                             <div class="col-md-6">
                                 <div class="media">
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/yQnQyI5WlKs" frameborder="0" allowfullscreen></iframe>
@@ -321,9 +454,259 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div> -->
 
-                    </section>
+                    <table class="table table-bordered">
+                        <tr class="info">
+                            <th>Modo</th>
+                            <th>Definición</th>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>Directorio</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>Archivo</td>
+                        </tr>
+                        <tr>
+                            <td>R</td>
+                            <td>Solo lectura</td>
+                        </tr>
+                        <tr>
+                            <td>l</td>
+                            <td>Enlace</td>
+                        </tr>
+                        <tr>
+                            <td>H</td>
+                            <td>Oculto</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>Sistema</td>
+                        </tr>
+                    </table>
+                    <h4>Desplazarlo en el directorio</h4>
+                    <p><code>Set-Location</code> lo permite moverlos libremente como lo hacíamos en su predecesor.</p>
+                    <hr>
+                    <table class="table table-bordered">
+                        <tr class="info">
+                            <th>Comando</th>
+                            <th>Definición</th>
+                        </tr>
+                        <tr>
+                            <td>Set-Location Nombredeldirectorio</td>
+                            <td>Lo permite moverlos al directorio especificado</td>
+                        </tr>
+                        <tr>
+                            <td>Set-Location ..</td>
+                            <td>Los dos puntos indica que retrocedamos un directorio</td>
+                        </tr>
+                        <tr>
+                            <td>Set-Location /</td>
+                            <td>Retrocedamos a la raiz del directorio</td>
+                        </tr>
+                        <tr>
+                            <td>Set-Location .\</td>
+                            <td>Del directorio actual desplázate hacia el directorio especificado</td>
+                        </tr>
+                    </table>
+
+                    <pre class="brush: javascript">
+                        Set-Location "\Users\Username\"
+
+                    </pre>
+
+                    <div class="intro2 clearfix">
+                        <p> <i class="fa fa-info"></i>Si vienes de CMD o de BASH puedes utilizar los alias CD o LS.
+                        </p>
+                    </div>
+                    <hr>
+                    <h4>Creación de carpeta y archivos</h4>
+                    <p>El cmdlets <code>New-Item</code> se usa para crear un elementos (directorio o archivo).</p>
+                    <h4>Directorio</h4>
+                    <pre class="brush: javascript">
+                        Nuevo-Elemento -RutaDondeSeCrearaElElemento 'Ruta\Nombredeldirectorio' -TipodeElemento Directorio
+                        ---------------------------------------------------------------------------------------------------------
+                        New-Item -Path  'C:\Demo' -ItemType Directory
+
+                    </pre> 
+                    <hr>   
+                    <h4>Archivo</h4>
+                    <pre class="brush: javascript">
+                        Nuevo-Elemento -RutaDondeSeCrearaElElemento 'Ruta\Nombredelarchivo.extension' -TipodeElemento Archivo
+                        ---------------------------------------------------------------------------------------------------------
+                        New-Item -Path  'C:\Users\Username\Desktop\demo.txt' -ItemType File 
+                    
+                    </pre>  
+                    <p>También podemos decirle que cree un directorio o archivo en el directorio actual remplazando la ruta por un simple punto(.).</p>  
+                    <pre class="brush: javascript">
+                        Nuevo-Elemento -RutaDondeSeCrearaElElemento 'Punto\Nombredelarchivo.extension' -TipodeElemento Archivo
+                        ---------------------------------------------------------------------------------------------------------
+                        New-Item -Path ./demo.txt -Type File
+                    
+                    </pre>
+                    <p>Podemos forzar su ejecución para que sobrescriba por el elemento actual utilizando <b>–Force</b> si dicho elemnto ya existe.</p>
+                    <pre class="brush: javascript">
+                        Nuevo-Elemento -RutaDondeSeCrearaElElemento 'Punto\Nombredelarchivo.extension' -TipodeElemento Archivo -forzar
+                        --------------------------------------------------------------------------------------------------------------
+                        New-Item -Path ./demo.txt -Type File -Force
+                    
+                    </pre>
+                    <hr>
+                    <h4>Copiar Carpetas y Archivos</h4>
+                    <p>Para copiar directorio o archivo deberemos utilizar <code>Copy-Item</code>.</p>
+                    <h4>Directorio</h4>
+                    <pre class="brush: javascript">
+                        Copiar-Elemento "Ruta->NombreDeldirectorioACopiar" -Destino "Ruta -> Destino"
+                        ---------------------------------------------------------------------------------
+                        Copy-Item .\Demo\ -Destination C:\
+                    
+                    </pre>
+                    <p>Como podemos observar podemos utilizar el atajo del punto (.) que vimos anteriormente. <br>
+
+                    <p>Si queremos copiar todos sub directorios, deberemos especificarle el atributo <b> –Recurse</b>.</p>
+                        
+                    <pre class="brush: javascript">
+                        Copiar-Elemento "Ruta->NombreDeldirectorioACopiar" -Destino "Ruta -> Directorio" -recursivo 
+                        ------------------------------------------------------------------------------------
+                        Copy-Item .\Demo\* -Destination C:\ -recurse
+                    
+                    </pre>
+                  <p>Si deseamo copiar todo el Contenido a nivel raiz del directorio de destino, podemos utilizar el atajo de asterisco (*)</p>
+                    <pre class="brush: javascript">
+                        Copy-Item .\Demo\* -Destination C:\ -recurse
+                   
+                    </pre>
+                    <hr>
+                  <div class="row">
+                    <div class="col-md-4">
+                        <img src="images/upload/Copia raiz.PNG" alt="Copiar raiz" style="max-width: 800px">
+                       </div>
+                  </div>
+                  <hr>
+                  <h4>Archivo</h4>
+                  <pre class="brush: javascript">
+
+                    Copiar-Elemento "Ruta->NombreDelArchivoACopiar" -Destino "Ruta -> Destino"
+                    ---------------------------------------------------------------------------------
+                    Copy-Item .\demo.txt -Destination C:\
+
+                  </pre>
+                  <p>También podemos decirle que cambie el nombre o extensión de un archivo solamente modificando la ruta destino.</p>
+                  <pre class="brush: javascript">
+                    Copy-Item ".\demo.txt" -Destination "demo.ps1"
+
+                  </pre>
+                  <hr>
+                  <h3>Eliminar carpetas y archivos</h3>
+                  <hr>
+                  <p>Hay otras forma de eliminar archivo y directorio, pero sin duda alguna <code>Remove-Item</code> es la mas comun.</p>
+                  <h4>Directorio</h4>
+                  <pre class="brush: javascript">
+                    Eliminar-Elemento .\NombreDelDirectorioOArchivoaEliminar\
+                    ----------------------------------------------------------------------
+                    Remove-Item  .\Demo\
+
+                  </pre>
+                  <p>A igual que como ocurría anteriormente con <code>Copy-Item</code>, necesitamos añadirle el atributo <b>-Recurse</b> para elimine todos los subdirectorios y archivos existente.</p>
+                  <pre class="brush: javascript">
+                    Eliminar-Elemento .\NombreDelDirectorioOArchivoaEliminar\ -Recursivo
+                    ----------------------------------------------------------------------
+                    Remove-Item .\Demo\ -Recurse
+
+                  </pre>
+                  <p>Sino especificamos el atributo PowerShell lo pedirá una confirmación . </p>
+                  <img src="images/upload/remove.png" alt="Confirmar">
+                    <h4>Archivo</h4>
+                    <pre class="brush: javascript">
+                        Eliminar-Elemento C:\Test\NombredelArchivo.NombredelElarchivo(.txt,etc)
+                        ------------------------------------------------------------------
+                        Remove-Item C:\Test\*.*
+
+                    </pre>
+                    <p>El asterisco (*) esta representado los nombre de los archivos y luego seguido del (.) el segundo asterisco (*) Esta remplazando las extensiones.</p>
+                    <pre class="brush: javascript">
+                        Eliminar-Elemento DirectorioActual -Incluir *.doc -Excluir*1*
+                        ----------------------------------------------------------------
+                        Remove-Item * -Include *.doc -Exclude *1*
+                    
+                    </pre>
+                    <p>Aquí otro ejemplo practico donde le indicamos que elimine todo los ficheros con la extensión .doc y excluya todos lo que tenga el numero 1 del directorio actua</p>
+                    <pre class="brush: javascript">
+                        Eliminar-Elemento -Path C:\ArchivoOculto.txt -Fuerza
+                        ----------------------------------------------------------------
+                        Remove-Item -Path C:\ArchivoOculto.txt -Force
+                    
+                    </pre>
+                    <P>Si deseamos forzar la eliminación de un archivo o directorio oculto, podemos utilizar el atributo <b> –Force</b></P>
+                    <h3>Renombrar y Mover Directorio \ Archivo</h3>
+                    <hr>
+                    <h4>Mover</h4>
+                    <p><code>Move-Item</code> lo permitirá mover tanto ficheros como directorios le hallamos especificado.</p>
+                    <pre class="brush: javascript">
+                        Mover-Elemento  -ruta .\Carpeta\  -Destino .\Carpeta2\   
+                        -----------------------------------------------------------------------  
+                         Move-Item  -Path .\Demo\  -Destination .\Demo2\  
+
+                    </pre>
+                    <p>Podemos indicarle que mueva todos los archivos especificado.</p>
+                    <pre class="brush: javascript">
+                        Mover-Elemento  -ruta .\Carpeta\Archivo.extension -Destino .\Carpeta2\   
+                        ----------------------------------------------------------------------- 
+                        Move-Item -Path .\Demo\*.txt -Destination C:\Demo2\
+
+                    </pre>
+                    <h4>Renombrar</h4>
+                    <p><code>Rename-Item</code> Lo permite cambiar nombre de elementos. </p>
+                    <pre class="brush: javascript">
+                        Renombrar-Item -ruta "c:\Nombre.extension " -NuevoNombre "NuevoNombre.extension " 
+                        ----------------------------------------------------------------------------------
+                        Rename-Item -Path "c:\demo.txt" -NewName "SoylaMejorDemo.txt"
+
+                    </pre>
+                    <h3>Comprobar</h3>
+                    <p><code>Test-Path</code> Lo permite comprobar si un elemento existe.</p>
+                    <pre class="brush: javascript">
+                        comprobar-Camino -Ruta "Ruta"
+                        --------------------------------------------------------
+                        Test-Path -Path "C:\Demo"
+
+                    </pre>
+                    <h4>Salida</h4>
+                    <pre class="brush: javascript">
+                        PS C:> Test-Path .\Demo\
+                        True
+                        ------------------------------------------
+                        PS C:> Test-Path .\Demo2\
+                        False
+                    
+                    </pre>
+                    <p><code>Test-Path</code> devolverá <b>True</b> si el archivo o directorio existe y <b>False</b> si no existe.
+                    </p>
+                    <pre class="brush: javascript">
+                        Test-Path "HKLM:\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell"
+                    
+                    </pre>
+                    <p>Verificamos si existe la clave de registro.</p>
+                    <h3>Get-content</h3>
+                    <p><code>Get-Content</code> lo permite obtener el contenido de un archivo.</p>
+                    <pre class="brush: javascript">
+                        Obtener-contenido c:nombredelarchivo.extension 
+                        ------------------------------------------------
+                        Get-Content c:\demo.txt
+                    
+                    </pre>
+                    <h4>Salida</h4>
+                    <pre class="brush: javascript">
+                        PS C:\Users\FranciscoBanegas> Get-Content c:\demo.txt
+                        Soy la  1 linea
+                        Soy la  2 linea
+                        Soy la  3 linea
+                        Soy la  4 linea
+                    
+                    </pre>
+                </section>
                     <!-- end section -->
 
                     <section id="line4" class="section">
