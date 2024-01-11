@@ -15,7 +15,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
 
-    <title>Item Name | Documentation by Author Name</title>
+    <title>Guia basica de PowerShell para Nuevos Usuarios | by Francisco Banegas</title>
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -113,7 +113,7 @@
                             <li><a href="#line1">Configuración de entorno</a></li>
                             <li><a href="#line2">CMDLets/Verbos/Get-Help</a></li>
                             <li><a href="#line3">Archivos y carpetas</a></li>
-                            <li><a href="#line4">Necessary Plugins</a></li>
+                            <li><a href="#line4">Cmdlets útiles</a></li>
                             <li><a href="#line5">Creating Blog Pages</a></li>
                             <li><a href="#line6">Revolution Slider</a></li>
                             <li><a href="#line7">How to Use Option Panel</a>
@@ -713,45 +713,723 @@ Runspace         : System.Management.Automation.Runspaces.LocalRunspace
 
                         <div class="row">
                             <div class="col-md-12 left-align">
-                                <h2 class="dark-text">Necessary Plugins <hr></h2>
+                                <h2 class="dark-text">Cmdlets útiles<hr></h2>
                             </div>
                             <!-- end col -->
                         </div>
-                        <!-- end row -->
+
 
                         <div class="row">
-                            <div class="col-md-4">
-                                <img src="images/upload/plugin1.png" alt="" class="img-responsive img-thumbnail">
-                                <h4>Plugin name #1</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4">
-                                <img src="images/upload/plugin2.png" alt="" class="img-responsive img-thumbnail">
-                                <h4>Plugin name #2</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4">
-                                <img src="images/upload/plugin3.png" alt="" class="img-responsive img-thumbnail">
-                                <h4>Plugin name #3</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                            </div>
-                            <!-- end col -->
-
                             <div class="col-md-12">
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
-                                </div>
+                                <p>Hablaremos de algunos de los Cmdlets útiles y veremos como funciona. </p>
                             </div>
                         </div>
-                        <!-- end row -->
+                        <h4>Sort-Object</h4>
+                        <p>Controlar el orden de salida de forma ascendente o descendente.</p>
+                        <pre class="brush: javascript">
+                            $variable -> Valor Almacenado
+                            ---------------------------------
+                            $Demo = "A","B","C","D"
 
-                    </section>
+                        </pre>
+                        <div class="intro2 clearfix">
+                            <p> <i class="fa fa-info"></i>Una variable se declara con el signo $ seguido del nombre de la variable, y se encarga de almacenar valores tales como números, cadenas (Texto), booleanos (Verdadero y Falso).
+                            </p>
+                        </div>
+                        <p>
+                            Para este ejemplo e creado una variable de nombre <b>Demo</b> que almacena letras en orden <br>
+                            alfabética, para lograr mostrar el funcionamiento de la instrucción <code>Sort-Object</code>.
+                        </p>
+                        <p>Si llamamos a la variable <b>Demo</b> obtendremos una salida en forma ordenada de la letra <b>A -> D</b>.</p>
+                        <h4>Salida</h4>
+                        <pre class="brush: javascript">
+                            A
+                            B
+                            C
+                            D
+                        
+                        </pre>
+                        <p>Como haríamos si queremos que la salida comienzo de la letra D -> A, sin modificar el orden de la variable. Una de la forma de hacerlo es con <code>Sort-Object</code>. </p>
+                        <h4>Salida</h4>
+                        <pre class="brush: javascript">
+                            D
+                            C
+                            B
+                            A
+                        
+                        </pre>
+                        <p>En este ejemplo manipulamos la salida utilizando Sort-object y el atributo –Descending (Descendente).</p>
+                        <pre class="brush: javascript">
+                            Get-ChildItem C:\Users\FranciscoBanegas | sort -Descending
+
+                        </pre>
+                        <h4>Salida</h4>
+                        <pre class="brush: javascript">
+                            Directorio: C:\Users\FranciscoBanegas
+
+
+                            Mode                 LastWriteTime         Length Name
+                            ----                 -------------         ------ ----
+                            d-r---         16/7/2023     17:19                Videos
+                            d-r---         22/6/2023     13:35                Searches
+                            d-r---         22/6/2023     13:34                Saved Games
+                            d-r---          7/7/2023     16:05                Pictures
+                            d-r---         22/6/2023     13:34                Music
+                            d-r---         22/6/2023     13:34                Links
+                            d-r---         22/6/2023     13:34                Favorites
+                            d-r---         27/7/2023     22:35                Documents
+                            d-r---         16/8/2023     01:12                Desktop
+                            d-----         13/8/2023     17:20                Demo2
+                            d-r---         22/6/2023     13:34                Contacts
+                            d-r---         22/6/2023     13:34                3D Objects
+                            d-----         24/6/2023     19:58                .vscode
+                            d-----         14/8/2023     18:18                .VirtualBox
+                            d-----         12/7/2023     12:36                .bito
+                        </pre>
+                        <p>Como vemos en el segundo ejemplo también podemos combinarlo con otros comandos como <code>Get-Chilidtem</code> utilizando <b>Pipe (|)</b> y emplear el uso de <b>Alias</b>.</p>
+                        <div class="intro2 clearfix">
+                            <p> <i class="fa fa-info"></i>No te preocupe si no tiene idea de que es pipe y un alias, aquí te va una introducción rápida. Un operador de Canalización (Pipelines) es una forma de unir varios comando , un alias hacer referencia a un método corto para llamar al comando. Sencillo no te parece ??.
+                            </p>
+                        </div>
+                 <hr>
+                        <h3>Get-Alias</h3>
+                        <p>Este comando nos permite mostrar los alias de los comandos. La sintaxis es <code>Get-Alias</code>.</p>
+                        <h4>Salida</h4>
+                        <pre class="brush: javascript">
+ CommandType     Name                                               Version Source
+-----------     ----                                               -------    ------
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+Alias           ac -> Add-Content
+Alias           asnp -> Add-PSSnapin
+Alias           cat -> Get-Content
+Alias           cd -> Set-Location
+Alias           CFS -> ConvertFrom-String                          3.1.0.0    
+Alias           chdir -> Set-Location
+Alias           clc -> Clear-Content
+Alias           clear -> Clear-Host
+Alias           clhy -> Clear-History
+Alias           cli -> Clear-Item
+Alias           clp -> Clear-ItemProperty
+Alias           cls -> Clear-Host
+Alias           clv -> Clear-Variable
+Alias           cnsn -> Connect-PSSession
+Alias           compare -> Compare-Object
+Alias           copy -> Copy-Item
+Alias           cp -> Copy-Item
+Alias           cpi -> Copy-Item
+Alias           cpp -> Copy-ItemProperty
+Alias           curl -> Invoke-WebRequest
+Alias           cvpa -> Convert-Path
+Alias           dbp -> Disable-PSBreakpoint
+Alias           del -> Remove-Item
+Alias           diff -> Compare-Object
+Alias           dir -> Get-ChildItem
+Alias           dnsn -> Disconnect-PSSession
+Alias           ebp -> Enable-PSBreakpoint
+Alias           echo -> Write-Output
+Alias           epal -> Export-Alias
+Alias           epcsv -> Export-Csv
+Alias           epsn -> Export-PSSession
+Alias           erase -> Remove-Item
+Alias           etsn -> Enter-PSSession
+Alias           exsn -> Exit-PSSession
+Alias           fc -> Format-Custom
+Alias           fhx -> Format-Hex                                  3.1.0.0    
+Alias           fl -> Format-List
+Alias           foreach -> ForEach-Object
+Alias           ft -> Format-Table
+Alias           fw -> Format-Wide
+Alias           gal -> Get-Alias
+Alias           gbp -> Get-PSBreakpoint
+Alias           gc -> Get-Content
+Alias           gcb -> Get-Clipboard                               3.1.0.0    
+Alias           gci -> Get-ChildItem
+Alias           gcm -> Get-Command
+Alias           gcs -> Get-PSCallStack
+Alias           gdr -> Get-PSDrive
+Alias           ghy -> Get-History
+Alias           gi -> Get-Item
+Alias           gin -> Get-ComputerInfo                            3.1.0.0    
+Alias           gjb -> Get-Job
+Alias           gl -> Get-Location
+Alias           gm -> Get-Member
+Alias           gmo -> Get-Module
+Alias           gp -> Get-ItemProperty
+Alias           gps -> Get-Process
+Alias           gpv -> Get-ItemPropertyValue
+Alias           group -> Group-Object
+Alias           gsn -> Get-PSSession
+Alias           gsnp -> Get-PSSnapin
+Alias           gsv -> Get-Service
+Alias           gtz -> Get-TimeZone                                3.1.0.0    
+Alias           gu -> Get-Unique
+Alias           gv -> Get-Variable
+Alias           gwmi -> Get-WmiObject
+Alias           h -> Get-History
+Alias           history -> Get-History
+Alias           icm -> Invoke-Command
+Alias           iex -> Invoke-Expression
+Alias           ihy -> Invoke-History
+Alias           ii -> Invoke-Item
+Alias           ipal -> Import-Alias
+Alias           ipcsv -> Import-Csv
+Alias           ipmo -> Import-Module
+Alias           ipsn -> Import-PSSession
+Alias           irm -> Invoke-RestMethod
+Alias           ise -> powershell_ise.exe
+Alias           iwmi -> Invoke-WmiMethod
+Alias           iwr -> Invoke-WebRequest
+Alias           kill -> Stop-Process
+Alias           lp -> Out-Printer
+Alias           ls -> Get-ChildItem
+Alias           man -> help
+Alias           md -> mkdir
+Alias           measure -> Measure-Object
+Alias           mi -> Move-Item
+Alias           mount -> New-PSDrive
+Alias           move -> Move-Item
+Alias           mp -> Move-ItemProperty
+Alias           mv -> Move-Item
+Alias           nal -> New-Alias
+Alias           ndr -> New-PSDrive
+Alias           ni -> New-Item
+Alias           nmo -> New-Module
+Alias           npssc -> New-PSSessionConfigurationFile
+Alias           nsn -> New-PSSession
+Alias           nv -> New-Variable
+Alias           ogv -> Out-GridView
+Alias           oh -> Out-Host
+Alias           popd -> Pop-Location
+Alias           ps -> Get-Process
+Alias           pushd -> Push-Location
+Alias           pwd -> Get-Location
+Alias           r -> Invoke-History
+Alias           rbp -> Remove-PSBreakpoint
+Alias           rcjb -> Receive-Job
+Alias           rcsn -> Receive-PSSession
+Alias           rd -> Remove-Item
+Alias           rdr -> Remove-PSDrive
+Alias           ren -> Rename-Item
+Alias           ri -> Remove-Item
+Alias           rjb -> Remove-Job
+Alias           rm -> Remove-Item
+Alias           rmdir -> Remove-Item
+Alias           rmo -> Remove-Module
+Alias           rni -> Rename-Item
+Alias           rnp -> Rename-ItemProperty
+Alias           rp -> Remove-ItemProperty
+Alias           rsn -> Remove-PSSession
+Alias           rsnp -> Remove-PSSnapin
+Alias           rujb -> Resume-Job
+Alias           rv -> Remove-Variable
+Alias           rvpa -> Resolve-Path
+Alias           rwmi -> Remove-WmiObject
+Alias           sajb -> Start-Job
+Alias           sal -> Set-Alias
+Alias           saps -> Start-Process
+Alias           sasv -> Start-Service
+Alias           sbp -> Set-PSBreakpoint
+Alias           sc -> Set-Content
+Alias           scb -> Set-Clipboard                               3.1.0.0    
+Alias           select -> Select-Object
+Alias           set -> Set-Variable
+Alias           shcm -> Show-Command
+Alias           si -> Set-Item
+Alias           sl -> Set-Location
+Alias           sleep -> Start-Sleep
+Alias           sls -> Select-String
+Alias           sort -> Sort-Object
+Alias           sp -> Set-ItemProperty
+Alias           spjb -> Stop-Job
+Alias           spps -> Stop-Process
+Alias           spsv -> Stop-Service
+Alias           start -> Start-Process
+Alias           stz -> Set-TimeZone                                3.1.0.0    
+Alias           sujb -> Suspend-Job
+Alias           sv -> Set-Variable
+Alias           swmi -> Set-WmiInstance
+Alias           tee -> Tee-Object
+Alias           trcm -> Trace-Command
+Alias           type -> Get-Content
+Alias           wget -> Invoke-WebRequest
+Alias           where -> Where-Object
+Alias           wjb -> Wait-Job
+Alias           write -> Write-Output
+
+</pre>
+
+<p>Como vemos la lista es extensa y eso que no hemos creado nuestros alias. Si quieres buscar un alias específico aquí te muestro un ejemplo.</p>
+  
+    <pre class="brush: javascript">
+        Get-Alias -Name g*, s* -Exclude *spp,sp*
+    
+    </pre>
+<p>Estanis indicando que busque los alias comenzados con la letras <b>G</b> y <b>S</b> y excluya los que contenga <b>spp,sp</b>.</p>
+<h4>Salida</h4>
+<pre class="brush: javascript">
+    CommandType     Name                                               Version Source
+    -----------     ----                                               -------    ------
+    Alias           gal -> Get-Alias
+    Alias           gbp -> Get-PSBreakpoint
+    Alias           gc -> Get-Content
+    Alias           gcb -> Get-Clipboard                               3.1.0.0    
+    Alias           gci -> Get-ChildItem
+    Alias           gcm -> Get-Command
+    Alias           gcs -> Get-PSCallStack
+    Alias           gdr -> Get-PSDrive
+    Alias           ghy -> Get-History
+    Alias           gi -> Get-Item
+    Alias           gin -> Get-ComputerInfo                            3.1.0.0    
+    Alias           gjb -> Get-Job
+    Alias           gl -> Get-Location
+    Alias           gm -> Get-Member
+    Alias           gmo -> Get-Module
+    Alias           gp -> Get-ItemProperty
+    Alias           gps -> Get-Process
+    Alias           gpv -> Get-ItemPropertyValue
+    Alias           group -> Group-Object
+    Alias           gsn -> Get-PSSession
+    Alias           gsnp -> Get-PSSnapin
+    Alias           gsv -> Get-Service
+    Alias           gtz -> Get-TimeZone                                3.1.0.0    
+    Alias           gu -> Get-Unique
+    Alias           gv -> Get-Variable
+    Alias           gwmi -> Get-WmiObject
+    Alias           sajb -> Start-Job
+    Alias           sal -> Set-Alias
+    Alias           saps -> Start-Process
+    Alias           sasv -> Start-Service
+    Alias           sbp -> Set-PSBreakpoint
+    Alias           sc -> Set-Content
+    Alias           scb -> Set-Clipboard                               3.1.0.0    
+    Alias           select -> Select-Object
+    Alias           set -> Set-Variable
+    Alias           shcm -> Show-Command
+    Alias           si -> Set-Item
+    Alias           sl -> Set-Location
+    Alias           sleep -> Start-Sleep
+    Alias           sls -> Select-String
+    Alias           sort -> Sort-Object
+    Alias           start -> Start-Process
+    Alias           stz -> Set-TimeZone                                3.1.0.0    
+    Alias           sujb -> Suspend-Job
+    Alias           sv -> Set-Variable
+    Alias           swmi -> Set-WmiInstance   
+</pre>
+<hr>
+<h3>Compare-Object</h3>
+<p><code>Compare-Object</code> lo permitirá comprobar si dos objecto son idéntico.</p>
+<pre class="brush: javascript">
+    Compara-objecto -Referencia (Get-Content -Path .\Demo.txt) -Diferente (Get-Content -Path .\Demo2.txt)
+    ------------------------------------------------------------------------------------------------------
+    Compare-Object -ReferenceObject (Get-Content -Path .\Demo.txt) -DifferenceObject (Get-Content -Path .\Demo2.txt)
+
+</pre>
+
+<pre class="brush: javascript">
+    Archivos Demo.txt | Demo2.txt
+-------------------------------------------
+SoyDemo           |SoyDemoLinea4
+SoyDemoLinea2     |SoyDemoLinea2
+SoyDemoLinea3     |SoyDemoLinea3 
+SoyDemoLinea4     |SoyDemo2
+
+</pre>
+<h4>Salida</h4>
+<pre class="brush: javascript">
+    InputObject SideIndicator
+----------- -------------
+SoyDemo2    =>
+SoyDemo     <=
+</pre>
+<p>Como vemos la línea de arriba lo que estamos haciendo es comprobar si el contenido dentro de los archivo <b>Demo</b> y <b>Demo2</b> son idéntico en caso que no lo sea lo arrogara en la salida cual palabra es diferente.</p>
+<p>Otro dato importante es Que la comprobación <b>no es de forma línea</b>, lo que quiero decir es que PowerShell es lo suficientemente inteligente para comprobar la palabra sin importar el orden en donde se encuentre.</p>
+
+<img src="images/upload/compare-object.png" alt="compare-object">
+
+<p>Recuerden que con Get-Content obtenemos el contenido del archivo Demo.txt y Demo2.txt.</p>
+
+<hr>
+<h3>Format-table |Format-List | Format-Wide</h3>
+<p>Los comando de <b>Format</b> lo permiten indicar el formato de salida.</p>
+<p>Esto significa que lo permitir manipular la salida de diferentes <b>cmdlets</b> por ejemplo <code>get-host</code> formato de salida es lista, que pasaría si queremos que su salida sea en formato tabla justo para eso están los CMDLets <b>Format</b></p>
+
+
+    <pre class="brush: javascript">
+        Cmdlets -> Canalización -> FormatodeSalidaTabla
+        --------------------------------------------------
+        Get-Host | Format-Table
+    
+    </pre>
+
+    <p>Antes de continuar recordemos que una tabla esta compuesta por filas y colunas.</p>
+
+    <p>Con eso dicho lo que estamos diciendo con Format-Table que la información de salida se como una tabla y no una lista.</p>
+
+    <h4>Salida Normal de <code>Get-Host</code></h4>
+    <pre class="brush: javascript">
+            Name             : Visual Studio Code Host
+            Version          : 2023.6.0
+            InstanceId       : 6fb73431-75d9-4e2d-b25d-297953cb4f39
+            UI               : System.Management.Automation.Internal.Host.InternalHostUserInterface
+            CurrentCulture   : es-AR
+            CurrentUICulture : es-ES
+            PrivateData      : Microsoft.PowerShell.ConsoleHost+ConsoleColorProxy
+            DebuggerEnabled  : True
+            IsRunspacePushed : False
+            Runspace         : System.Management.Automation.Runspaces.LocalRunspace
+        
+        </pre>
+
+    <h4>Salida de <code>Get-Host</code> en formato tabla</h4>
+    <pre class="brush: javascript">
+                Name                    Version  InstanceId                           UI                                                                   CurrentCultur 
+                                                                                                                                           e
+                ----                    -------  ----------                           --                                                                   ------------- 
+                Visual Studio Code Host 2023.6.0 6fb73431-75d9-4e2d-b25d-297953cb4f39 System.Management.Automation.Internal.Host.InternalHostUserInterface es-AR
+        
+            </pre>
+    
+            <h4>Salida Normal de <code>Get-ChildItem</code></h4>
+            <p>Para el ejemplo de formato lista utilizaremos <code>Get-ChildItem</code>.</p>
+            <pre class="brush: javascript">
+                Directorio: C:\Users\Username
+
+
+                Mode                 LastWriteTime         Length Name
+                ----                 -------------         ------ ----
+                d-----         12/7/2023     12:36                .bito
+                d-----         14/8/2023     18:18                .VirtualBox
+                d-----         24/6/2023     19:58                .vscode
+                d-r---         22/6/2023     13:34                3D Objects
+                d-r---         22/6/2023     13:34                Contacts
+                d-----         13/8/2023     17:20                Demo2
+                d-r---         16/8/2023     01:12                Desktop
+                d-r---         27/7/2023     22:35                Documents
+                d-r---         22/6/2023     13:34                Favorites
+                d-r---         22/6/2023     13:34                Links
+                d-r---         22/6/2023     13:34                Music
+                d-r---          7/7/2023     16:05                Pictures
+                d-r---         22/6/2023     13:34                Saved Games
+                d-r---         22/6/2023     13:35                Searches
+                d-r---         16/7/2023     17:19                Videos
+                -a----         16/8/2023     23:53             52 Demo.txt
+                -a----         17/8/2023     00:07             55 Demo2.txt
+            
+            </pre>
+
+            <h4>Salida de <code>Get-ChildItem</code> en formato lista</h4>
+
+            <pre class="brush: javascript">
+                Directorio: C:\Users\FranciscoBanegas
+
+
+
+Name           : .bito
+CreationTime   : 12/7/2023 12:36:23
+LastWriteTime  : 12/7/2023 12:36:27
+LastAccessTime : 16/8/2023 02:01:32
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : .VirtualBox
+CreationTime   : 24/6/2023 19:40:02
+LastWriteTime  : 14/8/2023 18:18:29
+LastAccessTime : 16/8/2023 02:01:32
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : .vscode
+CreationTime   : 24/6/2023 19:58:08
+LastWriteTime  : 24/6/2023 19:58:13
+LastAccessTime : 17/8/2023 16:26:47
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : 3D Objects
+CreationTime   : 22/6/2023 13:34:03
+LastWriteTime  : 22/6/2023 13:34:03
+LastAccessTime : 16/8/2023 23:42:46
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Contacts
+CreationTime   : 22/6/2023 13:34:03
+LastWriteTime  : 22/6/2023 13:34:03
+LastAccessTime : 16/8/2023 02:01:38
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Demo2
+CreationTime   : 13/8/2023 17:18:50
+LastWriteTime  : 13/8/2023 17:20:01
+LastAccessTime : 16/8/2023 02:01:38
+Mode           : d-----
+LinkType       :
+Target         : {}
+
+Name           : Desktop
+CreationTime   : 22/6/2023 13:33:52
+LastWriteTime  : 16/8/2023 01:12:34
+LastAccessTime : 17/8/2023 15:45:58
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Documents
+CreationTime   : 22/6/2023 13:33:52
+LastWriteTime  : 27/7/2023 22:35:56
+LastAccessTime : 16/8/2023 02:01:38
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Favorites
+CreationTime   : 22/6/2023 13:33:52
+LastWriteTime  : 22/6/2023 13:34:03
+LastAccessTime : 16/8/2023 02:01:38
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Links
+CreationTime   : 22/6/2023 13:33:52
+LastWriteTime  : 22/6/2023 13:34:03
+LastAccessTime : 16/8/2023 23:47:59
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Music
+CreationTime   : 22/6/2023 13:33:52
+LastWriteTime  : 22/6/2023 13:34:03
+LastAccessTime : 16/8/2023 02:01:38
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Pictures
+CreationTime   : 22/6/2023 13:33:52
+LastWriteTime  : 7/7/2023 16:05:24
+LastAccessTime : 16/8/2023 02:01:38
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Saved Games
+CreationTime   : 22/6/2023 13:33:52
+LastWriteTime  : 22/6/2023 13:34:03
+LastAccessTime : 16/8/2023 23:42:46
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Searches
+CreationTime   : 22/6/2023 13:34:03
+LastWriteTime  : 22/6/2023 13:35:10
+LastAccessTime : 16/8/2023 02:01:38
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Videos
+CreationTime   : 22/6/2023 13:33:52
+LastWriteTime  : 16/7/2023 17:19:07
+LastAccessTime : 17/8/2023 04:25:57
+Mode           : d-r---
+LinkType       :
+Target         : {}
+
+Name           : Demo.txt
+Length         : 52
+CreationTime   : 16/8/2023 23:42:55
+LastWriteTime  : 16/8/2023 23:53:42
+LastAccessTime : 17/8/2023 16:29:59
+Mode           : -a----
+LinkType       :
+Target         : {}
+VersionInfo    : File:             C:\Users\FranciscoBanegas\Demo.txt
+                 InternalName:
+                 OriginalFilename:
+                 FileVersion:
+                 FileDescription:
+                 Product:
+                 ProductVersion:
+                 Debug:            False
+                 Patched:          False
+                 PreRelease:       False
+                 PrivateBuild:     False
+                 SpecialBuild:     False
+                 Language:
+
+
+Name           : Demo2.txt
+Length         : 55
+CreationTime   : 16/8/2023 23:43:19
+LastWriteTime  : 17/8/2023 00:07:23
+LastAccessTime : 17/8/2023 16:29:59
+Mode           : -a----
+LinkType       :
+Target         : {}
+VersionInfo    : File:             C:\Users\FranciscoBanegas\Demo2.txt
+                 InternalName:
+                 OriginalFilename:
+                 FileVersion:
+                 FileDescription:
+                 Product:
+                 ProductVersion:
+                 Debug:            False
+                 Patched:          False
+                 PreRelease:       False
+                 PrivateBuild:     False
+                 SpecialBuild:     False
+                 Language:
+                
+                </pre>
+
+
+<h4>Salida aplicando el <code>Format-Wide</code></h4>
+
+<p>El formato de salida Amplio (Wide) es un formato de tabla que lo permite manipular la salida.</p>
+
+<pre class="brush: javascript">
+        Get-ChildItem | Format-Wide -Column 3
+    
+    </pre>
+
+<pre class="brush: javascript">
+    Directorio: C:\Users\FranciscoBanegas
+
+    .bito                                              .VirtualBox                                        .vscode
+    3D Objects                                         Contacts                                           Demo2
+    Desktop                                            Documents                                          Favorites
+    Links                                              Music                                              Pictures
+    Saved Games                                        Searches                                           Videos
+    Demo.txt                                           Demo2.txt    
+
+</pre>
+
+<p>En este ejemplo le hemos dicho que me muestre los directorios pero en 3 colunas. También podemos decirle que lo redimensione utilizando el atributo <b>–AutoSize</b> .</p>
+ 
+<pre class="brush: javascript">
+        Get-ChildItem | Format-Wide -Column 3 -AutoSize
+    
+    </pre>
+
+<pre class="brush: javascript">
+        Directorio: C:\Users\FranciscoBanegas
+
+        .bito        .VirtualBox  .vscode      3D Objects   Contacts     Demo2        Desktop      Documents    Favorites    Links       Music       Pictures    
+        Saved Games  Searches     Videos       Demo.txt     Demo2.txt
+    
+    </pre>
+
+    <pre class="brush: javascript">
+            Get-Host | Format-Wide -Property Version
+        
+        </pre>
+<p>Otra característica de este formato, es que lo permite selecciona una propiedad en concreto utilizando el atributo <b>Property</b></p>
+
+<pre class="brush: javascript">
+        2023.6.0
+    
+    </pre>
+
+    <h3>Get-History</h3>
+
+    <p>Obtener el historial</p>
+
+    <h4>Salida</h4>
+
+    <pre class="brush: javascript">
+        Id CommandLine
+        -- -----------
+         1 Get-Host
+         2 Get-Host | Format-Table
+         3 get-childItem
+         4 get-childItem | Format-List
+         5 clear
+         6 get-childItem | Format-Table
+         7 Get-Host
+         8 $psversiontable
+         9 Get-Host | Format-Table
+        10 Get-Host
+    
+    </pre>
+
+    <h3>Write-Host </h3>
+    <p>Escribe un mensaje personalizado de salida.</p>
+
+    <pre class="brush: javascript">
+            Mensaje normal
+            ---------------------------------------------
+            Write-Host "Hola Mundo"
+            ---------------------------------------------
+            Mensaje personalizado 
+            ---------------------------------------------
+            Write-Host ("Hola", "Mundo") -Separator ", -> " -ForegroundColor white -BackgroundColor red
+        
+        </pre>
+<p>
+<b>ForegroundColor</b> -> Color de letra <br>
+<b>BackgroundColor</b> -> Color de fondo <br>
+<b>Separator</b> -> Permite asignarle un separador, es necesario declararlo entre paréntesis y la coma indica que finalizo la palabra.
+</p>
+<h4>Salida</h4>
+<img src="images/upload/write.png" alt="Write-Host">
+ <h3>Read-Host</h3>
+ <p>Según Microsoft <code>Read-Host</code>,<b> Lee una línea de entrada de la consola</b>. Si bien la definición es precisa , permítanme darle una definición mas tosca. El siguiente comando lo permitirá formular una pregunta y luego espera una respuesta, dicha repuesta puede ser almacenada en una <b>variable</b> para que luego <b>realice una acción</b>.</p>
+
+<pre class="brush: javascript">
+        $Respuesta= Read-Host "Como te llamas ??"
+        Write-host $repuesta -Separator ", -> " -ForegroundColor white -BackgroundColor red
+    
+    </pre>
+
+    <h4>Salida</h4>
+    <img src="images/upload/read-host.png" alt="read-host">
+    <pre class="brush: javascript">
+            Read-Host Ingresar la contraseña -AsSecureString
+        
+        </pre>
+
+    <p>En el siguiente ejemplo le estamos diciendo con el atributo <b>AsSecureString</b> que proteja o oculte los datos escritos para que no arrogue en la salida.</p>
+
+    <h4>Salida</h4>
+    <img src="images/upload/AsSecureString.png" alt="AsSecureString">
+
+    <h3>Start-Sleep</h3>
+    <p><code>Start-Sleep</code> permite pausar la ejecución de un comando.</p>
+
+    <pre class="brush: javascript">
+            Abre bloc de notas -> suspende la ejecución y luego de 5 segundo -> cierra  bloc de notas
+            ---------------------------------------------------------------------------------------
+            Notepad.exe; Start-Sleep -Seconds 5; Stop-Process -Name notepad
+        
+        </pre>
+
+        <p>Es decidido mostrarle este ejemplo ya que lo muestra claramente el potencial que tiene dicho comando y importante entender que puede ejecutar aplicaciones, script y también pasarle otros cmdlets.</p>
+
+        <h3>Select-Object</h3>
+        <p><code>Select-Object</code> permite seleccionar un objeto de una lista de objetos.</p>
+        <pre class="brush: javascript">
+                Get-Host | select version
+            
+            </pre>
+        <h4>Salida</h4>
+        <pre class="brush: javascript">
+                Version
+                -------
+                2023.6.0
+            
+            </pre>
+    </section>
                     <!-- end section -->
 
                     <section id="line5" class="section">
