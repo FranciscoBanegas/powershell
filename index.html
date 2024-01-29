@@ -143,19 +143,27 @@
                                 </ul>
                             
                             </li>
-                            <li><a href="#line5">Administrar procesos con PowerShell</a>
+                            <li><a href="#line5">Administrar procesos</a>
                                 <ul class="nav">
-                                    <li><a href="#line5_1">Ver Procesos</a></li>
+                                    <li><a href="#line5_1">Obtener Procesos</a></li>
                                     <li><a href="#line5_2">Iniciar procesos</a></li>
                                     <li><a href="#line5_3">Detener procesos</a></li>
-                                    <!-- <li><a href="#line5_4">Formato de salida.</a></li>
-                                    <li><a href="#line5_5">Obtener el historial</a></li>
-                                    <li><a href="#line5_6">Escribe un mensaje</a></li>
-                                    <li><a href="#line5_7">Formular una pregunta</a></li>
-                                    <li><a href="#line5_8">Pausar la ejecución </a></li>
-                                    <li><a href="#line5_9">Seleccionar </a></li> -->
                                 </ul>
                             
+                            </li>
+                            <li><a href="#line6">Administrar Servicios</a>
+                                <ul class="nav">
+                                    <li><a href="#line6_1">Obtener Servicios</a></li>
+                                    <li><a href="#line6_2">Iniciar Servicios</a></li>
+                                    <li><a href="#line6_3">Detener Servicios</a></li>
+                                </ul>
+                            
+                            </li>
+                            <li><a href="#line7">Fecha y horas</a>
+                                <ul class="nav">
+                                    <li><a href="#line7_1">Obtener Fecha y Hora</a></li>
+                                    <li><a href="#line7_2">Establecer Fecha y Hora</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </nav >
@@ -1462,7 +1470,7 @@ VersionInfo    : File:             C:\Users\FranciscoBanegas\Demo2.txt
 
                         <div class="row">
                             <div class="col-md-12 left-align">
-                                <h2 class="dark-text">Administrar procesos con PowerShell <hr></h2>
+                                <h2 class="dark-text">Administrar procesos<hr></h2>
                             </div>
                             <!-- end col -->
                         </div>
@@ -1597,6 +1605,7 @@ VersionInfo    : File:             C:\Users\FranciscoBanegas\Demo2.txt
                             
                             </pre>
                             <h3 id="line5_2">Iniciar procesos</h3>
+                            <hr>
                             <p><code>Start-Process</code> Permite Iniciar uno o múltiples procesos en simultaneo.</p>
                             <h4>Sintaxis</h4>
                             <pre class="brush: javascript">
@@ -1610,12 +1619,12 @@ VersionInfo    : File:             C:\Users\FranciscoBanegas\Demo2.txt
                                 start-process -FilePath "C:\Program Files\Parsec\parsecd.exe" 
                             
                             </pre>
-                            <p>Inicia como administrador un proceso.</p>
+                            <h4>Inicia como administrador un proceso.</h4>
                             <pre class="brush: javascript">
                                 Start-Process -FilePath "notepad.exe" -Verb RunAs
                             
                             </pre>
-                            <p>Abrir múltiples procesos almacenado en un Array.</p>
+                            <h4>Abrir múltiples procesos almacenado en un Array.</h4>
                             <pre class="brush: javascript">
                                     # Lista de aplicaciones que deseas ejecutar
                                     $aplicaciones = "notepad.exe", "calc.exe", "explorer.exe"
@@ -1628,6 +1637,7 @@ VersionInfo    : File:             C:\Users\FranciscoBanegas\Demo2.txt
                             </pre>
 
                             <h3 id="line5_3"> Detener procesos</h3>
+                            <hr>
                             <p><code>Stop-Process</code> Permite detener uno o más procesos.</p>
                             <h4>Sintaxis</h4>
                             <pre class="brush: javascript">
@@ -1660,6 +1670,371 @@ VersionInfo    : File:             C:\Users\FranciscoBanegas\Demo2.txt
                     </section>
 
                     <!-- end section -->
+                    <section id="line6" class="section">
+                    
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Administrar Servicios<hr></h2>
+                            </div>
+                            <!-- end col -->
+                            <div class="row">
+                                <h3 id="line6_1">Obetener Servicios</h3>
+                                <hr>
+                                <p><code>Get-Service</code> Lo arroja una lista de los servicios que se encuentran en la máquina.</p>
+                                <pre class="brush: javascript">
+                                            Get-Service
+                                        
+                                        </pre>
+
+                                <h4>Salida</h4>
+                                <pre class="brush: javascript">
+                                        Status   Name               DisplayName
+                                        ------   ----               -----------
+                                        Stopped  AJRouter           Servicio de enrutador de AllJoyn
+                                        Stopped  ALG                Servicio de puerta de enlace de niv...
+                                        Stopped  AppIDSvc           Identidad de aplicación
+                                        Running  Appinfo            Información de la aplicación
+                                        Stopped  AppMgmt            Administración de aplicaciones
+                                        Stopped  AppReadiness       Preparación de aplicaciones
+                                        Stopped  AppVClient         Microsoft App-V Client
+                                        Running  AppXSvc            Servicio de implementación de AppX ...
+                                        Stopped  AudioEndpointBu... Compilador de extremo de audio de W...
+                                        Stopped  Audiosrv           Audio de Windows
+                                        Stopped  AxInstSV           Instalador de ActiveX (AxInstSV)
+                                        Running  BFE                Motor de filtrado de base
+                                        Stopped  BITS               Servicio de transferencia inteligen...
+                                        Running  BrokerInfrastru... Servicio de infraestructura de tare...
+                                        Stopped  bthserv            Servicio de compatibilidad con Blue...
+                                        Running  camsvc             Servicio Administrador de funcional...
+                                        Stopped  CaptureService_... CaptureService_70fdc
+                                        Running  cbdhsvc_70fdc      Servicio de usuario del portapapele...
+                                        Running  CDPSvc             Servicio de plataforma de dispositi...
+                                    
+                                    </pre>
+                                    <br>
+                                    <hr>
+                                    <p>Podemos filtrar por los servicios, que comienzen con <b>X</b> letra utilizando el caracter <code>*</code></p>
+                                    <pre class="brush: javascript">
+                                            Get-Service "user*"
+                                        
+                                        </pre>
+                                    
+                                    <h4>Salida</h4>
+                                    <pre class="brush: javascript">
+                                        Status   Name               DisplayName
+                                        ------   ----               -----------
+                                        Stopped  UserDataSvc_70fdc  Acceso a datos de usuarios_70fdc
+                                        Running  UserManager        Administrador de usuarios
+                                    
+                                    </pre>
+                                    <br>
+                                    <p>En varias ocasiones vamos a necesitar filtrar los servicio que contengan una palabra clave especificada. <br>Para ello podemos utilizar <code>-displayName "*audio*"</code> para que filtre los servicios que contengan la palabra <b.>especificada</b>.</p>
+                                    <pre class="brush: javascript">
+                                        Get-Service -DisplayName '*audio*'
+                                    
+                                    </pre>
+                                    <h4>Salida</h4>
+                                    <pre class="brush: javascript">
+                                                Status   Name               DisplayName
+                                                ------   ----               -----------
+                                                Stopped  AudioEndpointBu... Compilador de extremo de audio de W...
+                                                Stopped  Audiosrv           Audio de Windows
+                                                Stopped  QWAVE              Experiencia de calidad de audio y v...
+                                            
+                                            </pre>
+
+
+
+                                   <p>Para excluir un servicio podemos utilizar <code>-Exclude</code></p>
+                                    
+                                   <h5>Expresion Normal</h5>
+                                   <pre class="brush: javascript">
+                                                Get-Service -Name "wi*"
+                                            
+                                            </pre>
+                                    <h5>Expresion con Exclusion</h5>
+                                    <pre class="brush: javascript">
+                                        Get-Service -Name "wi*" -Exclude "WinRM"
+                                    
+                                    </pre>
+                                    <hr>
+                                        <h4>Salida sin exclusion</h4>
+                                        <pre class="brush: javascript">
+                                                    Status   Name               DisplayName
+                                                    ------   ----               -----------
+                                                    Stopped  WiaRpc             Eventos de adquisición de imágenes ...
+                                                    Running  WinDefend          Servicio Antivirus de Microsoft Def...
+                                                    Running  WinHttpAutoProx... Servicio de detección automática de...
+                                                    Running  Winmgmt            Instrumental de administración de W...
+                                                    Running  WinRM              Administración remota de Windows (W...
+                                                    Stopped  wisvc              Servicio de Windows Insider
+
+                                                </pre>
+
+                                        <h4>Salida con exclusion</h4>
+
+
+                                        <pre class="brush: javascript">
+                                                    Status   Name               DisplayName
+                                                    ------   ----               -----------
+                                                    Stopped  WiaRpc             Eventos de adquisición de imágenes ...
+                                                    Running  WinDefend          Servicio Antivirus de Microsoft Def...
+                                                    Running  WinHttpAutoProx... Servicio de detección automática de...
+                                                    Running  Winmgmt            Instrumental de administración de W...
+                                                    Stopped  wisvc              Servicio de Windows Insider
+                                                
+                                                </pre>
+                                        
+                                    
+                                            <h4>Filtrar servicios por estado</h4>
+                                            <p>Podemos filtrar los servicios por su estado, generalmente es muy utilizado para saber si un servicio esta en ejecucion o detenido. <br>
+                                            Con <code>Where-Object</code> estamos obteniendo <b>Status</b> de los servicios y finalmente  con el operador <code>-eq</code> evalue si es igual a <b>Running</b>. <br>
+                                            En caso que sea igual lo devolverá los servicios que esten en ejecucion.
+                                            </p>
+                                            <pre class="brush: javascript"> 
+
+                                                Get-Service -Name 'ssh*' | Where-Object {$_.Status -eq 'Running'}
+                                            
+                                            </pre>
+                                            <h4>Salida</h4>
+                                            <pre class="brush: javascript">
+                                                        Status   Name               DisplayName
+                                                        ------   ----               -----------
+                                                        Running  ssh-agent          OpenSSH Authentication Agent
+                                                        Running  sshd               OpenSSH SSH Server
+                                                    
+                                                    </pre>
+
+                                                    <hr>
+                                                    <br>
+                                                    <br  id="line6_2">
+                                                <h3>Iniciar Servicios</h3>
+                                                <hr>
+                                                <p>Para iniciar un servicio utilizaremos <code>Start-Service</code>.</p>
+                                                <pre class="brush: javascript">
+                                                    Start-Service -Name 'eventlog'
+                                                
+                                                </pre>
+                                                <h4>Salida</h4>
+                                                <pre class="brush: javascript">
+                                                            Status   Name               DisplayName
+                                                            ------   ----               -----------
+                                                            Running  eventlog           Registro de eventos de Windows
+                                                        
+                                                        </pre>
+
+                                                        <h4>Iniciar Varios Servicios</h4>
+                                                        <p>Para iniciar varios servicios en simultáneo hay multiples maneras de hacerlo. En este ocasion utilizare la manera mas comun que se suele utilizar. <br>
+                                                            Primero crearemos una variable que contenga los nombres de los servicios que queremos iniciar. Luego utilizaremos un bucle <code>Foreach</code> para que itere por cado uno de sus elementos y finalmente con <code>Start-Service</code> inicialice los Servicios. <br>
+                                                            Ya vimos algo similar en la seccion de <b>Admistrar Procesos</b> mas puntualmente en <b>Abrir múltiples procesos almacenado en un Array.</b>
+                                                        </p>
+                                                        <pre class="brush: javascript">
+                                                            # Lista de servicios a iniciar
+                                                            $servicios = "Servicio1", "Servicio2", "Servicio3"
+                                                            
+                                                            # Utilizando un bucle foreach para iniciar cada servicio
+                                                            foreach ($servicio in $servicios) {
+                                                                Start-Service -Name $servicio
+                                                            }
+                                                        
+                                                        </pre>
+                                                        <h4>Inicializar un servicio y registrar la acción en un archivo de texto</h4>
+                                                        <p>En este ejemplo iniciare un servicio y lo guardaremos en un archivo de texto, permitiéndoles tener un registro del servicio que se inicializo o que se detuvo.</p>
+                                                        <pre class="brush: javascript">
+                                                                     $Service = Get-Service eventlog
+                                                                     Start-Service -InputObject $Service -PassThru | Format-List >> log.txt
+                                                                    
+                                                                    </pre>
+                                                                    <h4>Contenido del archivo</h4>
+                                                                    <pre class="brush: javascript">
+                                                                        
+
+Name                : eventlog
+DisplayName         : Registro de eventos de Windows
+Status              : Running
+DependentServices   : {Wecsvc, Tailscale, AppVClient, netprofm...}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+                                                                       
+                                                                       </pre>
+<p>Es importante tener en cuenta que el archivo de texto se creará en el directorio actual. donde se encuentre situado en la terminal</p>
+<br>
+<br id="line6_3">
+<h3 >Detener Servicios</h3>
+ <hr>   
+<p>Para detener un servicio utilizaremos <code>Stop-Service</code>.</p>  
+
+<pre class="brush: javascript">
+            Stop-Service -Name 'ssh-agent'
+        
+        </pre>
+
+<p>Lo mas habitual al detener un servicio basico es agregarle el parámetro <code>-PassThru</code> esto con el fin de obtener el nombre del servicio  y si su estado fue detenido</p>
+<pre class="brush: javascript">
+            Stop-Service -Name 'ssh-agent' -PassThru
+        
+        </pre>
+
+<h4>Salida</h4>
+<pre class="brush: javascript">
+            Status   Name               DisplayName
+            ------   ----               -----------
+            Stopped  ssh-agent          OpenSSH Authentication Agent
+        
+        </pre>
+</div>
+                        </div>
+                    </section>
+                    <section id="line7" class="section">
+                    
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Fecha y Hora<hr></h2>
+                            </div>
+                            <!-- end col -->
+                            <p>Los cmdlets de fecha y hora lo permiten manipular fecha y hora actuales.                            </p>
+                            <div class="row">
+                                <h3 id="line7_1">Ver Fecha y Hora</h3>
+                                <hr>
+                                <p><code>Get-Date</code> Permite ver la fecha y hora actual.</p>
+                                <pre class="brush: javascript">
+                                            Get-Date
+                                            ------------------------
+                                            Salida
+                                            ------------------------
+                                            martes, 22 de agosto de 2023 17:54:10
+                                        
+                                        </pre>
+                                
+                                <p>
+                                    También podemos pasarle el Argumento <code>–DisplayHint</code> para ver la date <b> (Fecha)</b> o time <b>(Tiempo)</b>.
+                                </p>
+
+                                <h4>Ejemplo</h4>
+                                <pre class="brush: javascript">
+                                    Get-Date -DisplayHint Date
+                                    ------------------------
+                                    Salida
+                                    ------------------------
+                                    martes, 22 de agosto de 2023 
+                                
+                                </pre>
+                                <pre class="brush: javascript">
+                                        Get-Date -DisplayHint Time
+
+                                        -----------------------------
+                                        Salida
+                                        -----------------------------
+                                        17:57:40
+    
+                                    </pre>   
+                                    
+                                    <p>Si deseamos manipular el formato de salida de la fecha. </p>
+                                    <pre class="brush: javascript">
+                                            Get-Date -Format "dddd MM/dd/yyyy"   
+                                            ----------------------------------
+                                            Salida
+                                            ----------------------------------
+                                            martes 08/22/2023
+                                        
+                                        </pre>
+
+                                        <table class="table table-bordered">
+                                            <tr class="info">
+                                                <th>Valores</th>
+                                                <th>Definición</th>
+                                            </tr>
+                                            <tr>
+                                                <td>dddd</td>
+                                                <td>Nombre completo del día de la semana</td>
+                                            </tr>
+                                            <tr>
+                                                <td>MM</td>
+                                                <td>Numero del mes – 2 Digito</td>
+                                            </tr>
+                                            <tr>
+                                                <td>dd</td>
+                                                <td>Dia – 2 Digito</td>
+                                            </tr>
+                                            <tr>
+                                                <td>yyyy</td>
+                                                <td>Año – 4 Digito</td>
+                                            </tr>
+                                            <tr>
+                                                <td>HH:mm</td>
+                                                <td>Hora Actual</td>
+                                            </tr>
+                                        </table>
+                                        <p>Tambien podemos lograr algo similamente utilizando <code>–UFormat</code> </p>
+                                        <pre class="brush: javascript">
+                                            Get-Date -UFormat "%A %m/%d/%Y %R"
+                                            ---------------------------------------
+                                            Salida
+                                            ---------------------------------------
+                                            martes 08/22/2023 18:12
+                                        
+                                        </pre>
+
+                                        <table class="table table-bordered">
+                                            <tr class="info">
+                                                <th>Valores</th>
+                                                <th>Definición</th>
+                                            </tr>
+                                            <tr>
+                                                <td>%A</td>
+                                                <td>Nombre completo del día de la semana</td>
+                                            </tr>
+                                            <tr>
+                                                <td>%m</td>
+                                                <td>Numero del mes – 2 Digito</td>
+                                            </tr>
+                                            <tr>
+                                                <td>%d</td>
+                                                <td>Dia – 2 Digito</td>
+                                            </tr>
+                                            <tr>
+                                                <td>%Y</td>
+                                                <td>Año – 4 Digito</td>
+                                            </tr>
+                                            <tr>
+                                                <td>%R</td>
+                                                <td>Hora Actual</td>
+                                            </tr>
+                                        </table>
+
+                                        <p>Para saber mas sobre <code>Get-Date</code> recomiendo pegarle una ojeada a la documentacion.</p>
+                                        <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.3" target="_blank" class="btn btn-primary">Saber más</a>
+                                        <hr>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="row">
+                                        <h3 id="line7_2">Establecer Fecha y Hora</h3>
+                                        <hr>
+                                        <p><code>Set-Date</code> Permite ver la fecha y hora actual.</p>
+                                        <pre class="brush: javascript">
+                                            Set-Date -Date (Get-Date).AddDays(3)
+                                        
+                                        </pre>
+
+                                        <p>Añadimos mas días utilizando el método <code>.AddDays().</code>.</p>
+                                        <img src="images/upload/Set-Date.png"  class="img-responsive" alt="">
+                                        
+                                        <p>Utilizando <Code> –adjust</Code> podemos retrasar la hora o adelantar el tiempo.</p>
+                                        
+                                        <pre class="brush: javascript">
+                                            Set-Date -Adjust -0:20:0 -DisplayHint Time
+                                        
+                                        </pre>
+                                        <p>Le estamos Indicando con el valor negativo (<b>-</b>) que retrase el tiempo, si deseamos avanzar en el tiempo solo deberíamos quita el signo (<b>–</b>) .</p>
+                                        <img src="images/upload/Set-Date-2.png"  class="img-responsive" alt="">
+                                        
+                                        <hr>
+                                            </div>
+                    </section>
                 </div>
                 <!-- // end .col -->
 
